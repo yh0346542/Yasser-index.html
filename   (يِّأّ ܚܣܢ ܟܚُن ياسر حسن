@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>يَحْكُم | YAHKUM</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#090d16;color:#f5f1e8;
+ font-family:Tahoma,Arial,sans-serif;line-height:1.8
+}
+header{
+ padding:20px;text-align:center;
+ background:#111827;border-bottom:2px solid #d8b568
+}
+.logo{font-size:35px;color:#e8c77e;font-weight:bold}
+header p{color:#c5c5c5;margin:0}
+nav{padding:14px;text-align:center;background:#151d2b}
+nav a{color:#e8c77e;text-decoration:none;margin:10px}
+.hero{text-align:center;padding:65px 15px}
+.hero h1{font-size:38px;color:#e8c77e}
+.hero p{color:#ccc;font-size:18px}
+button{
+ background:#d8b568;color:#111;border:0;
+ padding:12px 22px;border-radius:8px;
+ font-size:16px;cursor:pointer
+}
+section{padding:35px 5%}
+h2{text-align:center;color:#e8c77e}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+ gap:15px
+}
+.card{
+ background:#151f30;border:1px solid #394253;
+ padding:20px;border-radius:13px;text-align:center
+}
+.card h3{color:#e8c77e}
+.card p{color:#c4c9d1;font-size:14px}
+input{
+ width:75%;padding:13px;border-radius:8px;
+ border:1px solid #d8b568;background:#111827;color:white
+}
+.ask{text-align:center}
+footer{
+ text-align:center;padding:25px;background:#111827;
+ border-top:1px solid #d8b568;color:#ccc
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">يَحْكُم</div>
+ <p>YAHKUM | منصة العلوم والمعرفة والاكتشافات</p>
+</header>
+
+<nav>
+ <a href="#science">العلوم</a>
+ <a href="#ask">اسأل يَحْكُم</a>
+ <a href="#discover">الاكتشافات</a>
+ <a href="#about">عن المنصة</a>
+</nav>
+
+<div class="hero">
+ <h1>العلم سؤالٌ… والاكتشاف بداية جواب</h1>
+ <p>عالم واحد يجمع العلوم والمعرفة والابتكار بين يديك.</p>
+ <a href="#science"><button>ابدأ الاستكشاف</button></a>
+</div>
+
+<section id="science">
+ <h2>موسوعة العلوم</h2>
+ <div class="grid">
+  <div class="card"><h3>∑ الرياضيات</h3><p>الأعداد والمعادلات والهندسة.</p></div>
+  <div class="card"><h3>⚛ الفيزياء</h3><p>المادة والطاقة والكون.</p></div>
+  <div class="card"><h3>⚗ الكيمياء</h3><p>العناصر والتفاعلات.</p></div>
+  <div class="card"><h3>❖ الأحياء</h3><p>الحياة والخلايا والكائنات.</p></div>
+  <div class="card"><h3>✚ الطب</h3><p>المعرفة الصحية والعلوم الطبية.</p></div>
+  <div class="card"><h3>✦ الفلك</h3><p>النجوم والكواكب والمجرات.</p></div>
+  <div class="card"><h3>🌍 علوم الأرض</h3><p>الأرض والمناخ والبيئة.</p></div>
+  <div class="card"><h3>⌘ التقنية</h3><p>الحاسوب والذكاء الاصطناعي.</p></div>
+  <div class="card"><h3>⚙ الهندسة</h3><p>التصميم والاختراع والبناء.</p></div>
+  <div class="card"><h3>📚 التاريخ</h3><p>تاريخ العلوم والحضارات.</p></div>
+ </div>
+</section>
+
+<section id="ask" class="ask">
+ <h2>اسأل يَحْكُم</h2>
+ <p>ما السؤال العلمي الذي تريد اكتشاف إجابته؟</p>
+ <input id="question" placeholder="اكتب سؤالك هنا">
+ <button onclick="askQuestion()">إرسال السؤال</button>
+ <p id="answer"></p>
+</section>
+
+<section id="discover">
+ <h2>مكتبة الاكتشافات</h2>
+ <div class="card">
+  <h3>من المعرفة تبدأ الاختراعات</h3>
+  <p>هنا سننشر الأبحاث والاكتشافات والمشروعات العلمية مع مصادرها الموثوقة.</p>
+ </div>
+</section>
+
+<section id="about">
+ <h2>رسالة يَحْكُم</h2>
+ <div class="card">
+  <p>أن نجعل المعرفة متاحة للجميع، وأن نفتح أبواب العلم للباحث والطالب وكل محب للاكتشاف.</p>
+ </div>
+</section>
+
+<footer>
+ يَحْكُم | YAHKUM
+ <p>منصة المعرفة والعلوم والاكتشافات</p>
+ <small>النسخة التأسيسية 2026</small>
+</footer>
+
+<script>
+function askQuestion(){
+ const q=document.getElementById("question").value.trim();
+ const answer=document.getElementById("answer");
+ if(!q){answer.textContent="اكتب سؤالك أولاً.";return;}
+ answer.textContent="تم تسجيل سؤالك في هذه النسخة التجريبية. سيتم ربطه بمحرك الإجابات العلمية لاحقاً.";
+}
+</script>
+</body>
+</html>
